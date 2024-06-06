@@ -35,13 +35,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.flora.vista.R
 
 @Composable
-fun TitleText(value: String){
+fun SignupTitleText(value: String){
     Text(
         text = value,
         modifier = Modifier
@@ -49,6 +50,21 @@ fun TitleText(value: String){
             .heightIn(min = 19.dp),
         style = TextStyle(
             fontSize = 16.sp,
+            fontWeight = FontWeight.ExtraBold,
+            fontStyle = FontStyle.Normal
+        )
+    )
+}
+
+@Composable
+fun WelcomeTitleText(value: String){
+    Text(
+        text = value,
+        modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(min = 19.dp),
+        style = TextStyle(
+            fontSize = 30.sp,
             fontWeight = FontWeight.ExtraBold,
             fontStyle = FontStyle.Normal
         )
@@ -141,7 +157,30 @@ fun PasswordTextField(labelValue: String){
 }
 
 @Composable
-fun SubmitButton(value: String){
+fun SignupButton(value: String){
+    Button(
+        onClick = { /*TODO*/ },
+        modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(48.dp),
+        contentPadding = PaddingValues(),
+        colors = ButtonDefaults.buttonColors(Color.Black)
+    ) {
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(48.dp),
+            contentAlignment = Alignment.Center
+        ){
+            Text(text = value,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Normal
+            )
+        }
+    }
+}
+
+@Composable
+fun LoginButton(value: String){
     Button(
         onClick = { /*TODO*/ },
         modifier = Modifier
@@ -173,6 +212,18 @@ fun BungaImage(){
 }
 
 @Composable
+fun LoginImage(){
+    Image(
+        painter = painterResource(R.drawable.login),
+        contentDescription = "Image",
+        modifier = Modifier
+            .offset(x = (0).dp, y = -70.dp) // Mengatur offset
+            .heightIn(min = 19.dp)
+    )
+}
+
+
+@Composable
 fun RegisterTextClick(onRegisterClick: () -> Unit) {
     val annotatedText = buildAnnotatedString {
         append("Not a member? ")
@@ -181,10 +232,17 @@ fun RegisterTextClick(onRegisterClick: () -> Unit) {
         }
     }
 
-    Text(
-        text = annotatedText,
+    Box(
         modifier = Modifier
-            .padding(16.dp)
+            .fillMaxWidth()
             .clickable(onClick = onRegisterClick)
-    )
+    ) {
+        Text(
+            text = annotatedText,
+            modifier = Modifier
+                .padding(0.dp)
+                .fillMaxWidth(),
+            textAlign = TextAlign.Center
+        )
+    }
 }

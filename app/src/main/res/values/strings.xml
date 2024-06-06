@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Flora Vista</string>
-    <string name="title_activity_login">Login</string>
+    <string name="title_activity_login">Welcome!</string>
+    <string name="button_activity_login">Login</string>
     <string name="title_activity_signup">Sign-up</string>
     <string name="signup_description">Create an account to get started </string>
     <string name="title_activity_home">Home</string>

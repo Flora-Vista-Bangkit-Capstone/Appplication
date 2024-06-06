@@ -25,9 +25,9 @@ import com.flora.vista.component.BungaImage
 import com.flora.vista.component.DescriptionText
 import com.flora.vista.component.EditTextField
 import com.flora.vista.component.PasswordTextField
-import com.flora.vista.component.SubmitButton
+import com.flora.vista.component.SignupButton
+import com.flora.vista.component.SignupTitleText
 import com.flora.vista.component.TextFieldTitle
-import com.flora.vista.component.TitleText
 import com.flora.vista.ui.theme.FloraVistaTheme
 
 class Register {
@@ -51,7 +51,7 @@ fun SignupUI(navController: NavController) {
                     .padding(25.dp)
             ) {
                 Spacer(modifier = Modifier.height(30.dp))
-                TitleText(value = stringResource(id = R.string.title_activity_signup))
+                SignupTitleText(value = stringResource(id = R.string.title_activity_signup))
                 DescriptionText(value = stringResource(id = R.string.signup_description))
                 Spacer(modifier = Modifier.height(40.dp))
 
@@ -68,7 +68,7 @@ fun SignupUI(navController: NavController) {
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Spacer(modifier = Modifier.height(50.dp))
-                SubmitButton(value = stringResource(id = R.string.title_activity_signup))
+                SignupButton(value = stringResource(id = R.string.title_activity_signup))
             }
         }
     }
