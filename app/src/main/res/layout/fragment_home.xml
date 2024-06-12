@@ -6,6 +6,266 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <ImageView
+        android:id="@id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/user_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/hi"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toEndOf="@+id/user_avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/inter_black"
+        tools:text="@string/username"
+        app:layout_constraintStart_toEndOf="@+id/user_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/cardBox"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/card_home_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/personDailyTip"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/person_daily_tip"
+        app:layout_constraintBottom_toBottomOf="@+id/cardBox"
+        app:layout_constraintEnd_toEndOf="@+id/cardBox"
+        app:layout_constraintStart_toStartOf="@+id/cardBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/cardTitle"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        android:flipInterval="2000"
+        android:inAnimation="@anim/slide_out_left"
+        android:outAnimation="@anim/slide_in_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/card_title1"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/cardTitle1"
+                android:textColor="@color/navy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_title2"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/cardTitle2"
+                android:textColor="@color/navy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_title3"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/cardTitle3"
+                android:textColor="@color/navy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/cardText"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        android:flipInterval="2000"
+        android:inAnimation="@anim/slide_out_left"
+        android:outAnimation="@anim/slide_in_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/card_text1"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/cardText1"
+                android:textColor="@color/brown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_text2"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/cardText2"
+                android:textColor="@color/brown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_text3"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/cardText3"
+                android:textColor="@color/brown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter_black"
+        android:text="@string/categories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardBox" />
+
+    <ImageButton
+        android:id="@+id/indoorButton"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/indoor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories" />
+
+
+    <TextView
+        android:id="@+id/indoorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/indoor"
+        app:layout_constraintBottom_toBottomOf="@+id/indoorButton"
+        app:layout_constraintEnd_toEndOf="@+id/indoorButton"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/indoorButton"
+        app:layout_constraintTop_toTopOf="@+id/indoorButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/outdoor"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/outdoor"
+        app:layout_constraintStart_toEndOf="@+id/indoorButton"
+        app:layout_constraintTop_toBottomOf="@+id/categories" />
+
+    <TextView
+        android:id="@+id/outdoorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/outdoor"
+        app:layout_constraintBottom_toBottomOf="@+id/outdoor"
+        app:layout_constraintEnd_toEndOf="@+id/outdoor"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toEndOf="@+id/indoorText"
+        app:layout_constraintTop_toTopOf="@+id/outdoor"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/garden"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/garden"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/outdoor"
+        app:layout_constraintTop_toBottomOf="@+id/categories" />
+
+    <TextView
+        android:id="@+id/gardenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/garden"
+        app:layout_constraintBottom_toBottomOf="@+id/garden"
+        app:layout_constraintEnd_toEndOf="@+id/garden"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toEndOf="@+id/outdoorText"
+        app:layout_constraintTop_toTopOf="@+id/garden"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/History"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter_black"
+        android:text="@string/history"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indoorButton" />
+
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
@@ -17,6 +277,8 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 </androidx.constraintlayout.widget.ConstraintLayout>
