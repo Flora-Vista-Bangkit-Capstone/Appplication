@@ -2,11 +2,9 @@
     <string name="app_name">floravista</string>
 
     <string name="login">Login</string>
-    <string name="register">Sign Up</string>
     <string name="get">Get Started</string>
     <string name="welcome">Welcome!</string>
     <string name="signup">Sign up</string>
-    <string name="email_title">Sign up</string>
     <string name="signup_desc">Create an account to get started</string>
     <string name="email">Email Address</string>
     <string name="pass">Password</string>
@@ -19,11 +17,17 @@
     <string name="title_home">Home</string>
     <string name="title_scan">Scan</string>
     <string name="title_profile">Profile</string>
+	<string name="plant_name">Monsterra Borgisiana</string>
+    <string name="plant_brief">A variety of Monsterra</string>
+    <string name="plant_desc">A genus of 59 species of flowering plants in the arum family, Araceae, native to tropical regions of the Americas</string>
+    <string name="family">Family :</string>
+    <string name="plant_family">Monsterra</string>
+    <string name="healthy">Healthiness :</string>
+    <string name="plant_health">Healthy</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
