@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@id/AppBar" />
 
     <TextView
-        android:id="@id/plant_desc"
+        android:id="@id/plant_brief"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/welcome_img"
-        android:layout_width="377dp"
-        android:layout_height="283dp"
+        android:layout_width="393dp"
+        android:layout_height="296dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="32dp"
         android:adjustViewBounds="true"
         android:background="@drawable/login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,13 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
+        android:alpha="0"
+        tools:alpha="100"
         android:fontFamily="@font/inter_black"
         android:text="@string/welcome"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome_img" />
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailEditTextLayout"
@@ -40,14 +41,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
+        tools:alpha="100"
         android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:alpha="100">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
@@ -58,7 +59,6 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -68,12 +68,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
+        tools:alpha="100"
         android:hint="@string/pass"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
-        tools:alpha="100">
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"
@@ -84,25 +84,16 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/forgot_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/inter_semibold"
-        android:text="@string/forgot"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditTextLayout" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="348dp"
         android:layout_height="54dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:alpha="0"
+        tools:alpha="100"
         android:background="@drawable/custom_login_button"
         android:fontFamily="@font/inter_semibold"
         android:text="@string/login"
@@ -117,6 +108,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:alpha="0"
+        tools:alpha="100"
         android:fontFamily="@font/inter"
         android:text="@string/not"
         android:textColor="@color/gray"
@@ -129,10 +122,13 @@
     <TextView
         android:id="@+id/register_now"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48sp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/inter_semibold"
         android:text="@string/now"
+        android:clickable="true"
+        android:alpha="0"
+        tools:alpha="100"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,39 +136,5 @@
         app:layout_constraintLeft_toRightOf="@id/not_member"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginButton" />
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="335dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/not_member" />
-
-    <TextView
-        android:id="@+id/continue_with"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/cont"
-        android:textColor="@color/gray"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line" />
-
-    <Button
-        style="?attr/materialIconButtonOutlinedStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:icon="@drawable/google"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/continue_with" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

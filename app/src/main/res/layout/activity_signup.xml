@@ -36,11 +36,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="19dp"
+        android:alpha="0"
+        tools:alpha="100"
         android:fontFamily="@font/inter_black"
         android:text="@string/name"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_description" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_textbox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -49,12 +52,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="75dp"
         android:alpha="0"
+        tools:alpha="100"
         android:hint="@string/name"
         app:boxStrokeColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_title"
-        tools:alpha="100">
+        app:layout_constraintTop_toBottomOf="@+id/name_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameEditText"
@@ -72,6 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="19dp"
+        android:alpha="0"
+        tools:alpha="100"
         android:fontFamily="@font/inter_black"
         android:text="@string/email"
         android:textSize="15sp"
@@ -85,12 +90,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="75dp"
         android:alpha="0"
+        tools:alpha="100"
         android:hint="@string/email"
         app:boxStrokeColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_title"
-        tools:alpha="100">
+        app:layout_constraintTop_toBottomOf="@+id/email_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
@@ -109,6 +114,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="19dp"
+        android:alpha="0"
+        tools:alpha="100"
         android:fontFamily="@font/inter_black"
         android:text="@string/pass"
         android:textSize="15sp"
@@ -123,13 +130,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="75dp"
         android:alpha="0"
+        tools:alpha="100"
         android:hint="@string/pass"
         app:boxStrokeColor="@color/black"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_title"
-        tools:alpha="100">
+        app:layout_constraintTop_toBottomOf="@+id/password_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"
@@ -148,6 +155,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="32dp"
+        android:alpha="0"
+        tools:alpha="100"
         android:background="@drawable/custom_login_button"
         android:fontFamily="@font/inter_semibold"
         android:text="@string/signup"
