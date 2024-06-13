@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">floravista</string>
 
+    <string name="seeall">See All</string>
     <string name="history">History</string>
     <string name="garden">Garden</string>
     <string name="outdoor">Outdoor</string>

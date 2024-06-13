@@ -267,6 +267,113 @@
         app:layout_constraintTop_toBottomOf="@+id/indoorButton" />
 
     <TextView
+        android:id="@+id/historyViewList"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/inter"
+        android:text="@string/seeall"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/History"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/historyCard1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/history_card1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/History" />
+
+    <ImageButton
+        android:id="@+id/historyImage1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyCard1"
+        app:layout_constraintEnd_toEndOf="@+id/historyCard1"
+        app:layout_constraintStart_toStartOf="@+id/historyCard1"
+        app:layout_constraintTop_toTopOf="@+id/historyCard1"
+        tools:background="@drawable/beige_simple_aesthetic_cactus_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyCard1"
+        app:layout_constraintEnd_toEndOf="@+id/historyCard1"
+        app:layout_constraintStart_toStartOf="@+id/historyCard1"
+        app:layout_constraintTop_toBottomOf="@+id/historyImage1"
+        android:fontFamily="@font/inter_bold"
+        tools:text="PlantName1" />
+
+    <ImageButton
+        android:id="@+id/historyCard2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/history_card2"
+        app:layout_constraintStart_toEndOf="@+id/historyCard1"
+        app:layout_constraintTop_toBottomOf="@+id/History" />
+
+    <ImageButton
+        android:id="@+id/historyImage2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyCard2"
+        app:layout_constraintEnd_toEndOf="@+id/historyCard2"
+        app:layout_constraintStart_toStartOf="@+id/historyCard2"
+        app:layout_constraintTop_toTopOf="@+id/historyCard2"
+        tools:background="@drawable/beige_simple_aesthetic_cactus_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyCard2"
+        app:layout_constraintEnd_toEndOf="@+id/historyCard2"
+        app:layout_constraintStart_toStartOf="@+id/historyCard2"
+        app:layout_constraintTop_toBottomOf="@+id/historyImage2"
+        android:fontFamily="@font/inter_bold"
+        tools:text="PlantName2" />
+
+    <ImageButton
+        android:id="@+id/historyCard3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/history_card3"
+        app:layout_constraintStart_toEndOf="@+id/historyCard2"
+        app:layout_constraintTop_toBottomOf="@+id/History" />
+
+    <ImageButton
+        android:id="@+id/historyImage3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyCard3"
+        app:layout_constraintEnd_toEndOf="@+id/historyCard3"
+        app:layout_constraintStart_toStartOf="@+id/historyCard3"
+        app:layout_constraintTop_toTopOf="@+id/historyCard3"
+        tools:background="@drawable/beige_simple_aesthetic_cactus_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyCard3"
+        app:layout_constraintEnd_toEndOf="@+id/historyCard3"
+        app:layout_constraintStart_toStartOf="@+id/historyCard3"
+        app:layout_constraintTop_toBottomOf="@+id/historyImage3"
+        android:fontFamily="@font/inter_bold"
+        tools:text="PlantName3" />
+
+    <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
