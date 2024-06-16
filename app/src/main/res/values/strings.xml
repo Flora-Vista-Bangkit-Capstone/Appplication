@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">floravista</string>
 
+    <string name="logout">Log out</string>
+    <string name="about">About</string>
+    <string name="profile_tooltip">a fellow gardener</string>
     <string name="seeall">See All</string>
     <string name="history">History</string>
     <string name="garden">Garden</string>
