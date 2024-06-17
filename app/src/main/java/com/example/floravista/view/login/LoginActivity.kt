@@ -11,6 +11,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.viewModels
+import com.example.floravista.MenuBottom
 import com.example.floravista.ViewModelFactory
 import com.example.floravista.data.pref.UserModel
 import com.example.floravista.databinding.ActivityLoginBinding
@@ -72,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun authenticationPass() {
         loginViewModel.loginResponse.observe(this){ login ->
-            if(login.user == null){
+            if(login.user != null){
                 loginViewModel.saveSession(
                     UserModel(
                         binding.emailEditText.text.toString(),
@@ -81,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
                     )
                 )
                 showLoading(false)
-                val intent = Intent(this@LoginActivity,  MainActivity::class.java)
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
             }else{

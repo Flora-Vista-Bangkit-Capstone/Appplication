@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.example.floravista.R
+import com.example.floravista.MenuBottom
 import com.example.floravista.ViewModelFactory
 import com.example.floravista.databinding.ActivityMainBinding
 import com.example.floravista.view.WelcomeActivity
