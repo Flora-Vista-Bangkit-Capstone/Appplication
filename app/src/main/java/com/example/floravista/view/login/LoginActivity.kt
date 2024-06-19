@@ -59,16 +59,16 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.loginButton.setOnClickListener {
-            val email = binding.emailEditText.text.toString()
-            val password = binding.passwordEditText.text.toString()
+            val email = binding.emailEditTextLayout.text.toString()
+            val password = binding.passwordEditTextLayout.text.toString()
             if (email.isBlank() || password.isBlank()) {
                 Toast.makeText(this, "Cannot be empty", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } else {
                 binding.apply {
                     loginViewModel.login(
-                        emailEditText.text.toString(),
-                        passwordEditText.text.toString()
+                        emailEditTextLayout.text.toString(),
+                        passwordEditTextLayout.text.toString()
                     )
                 }
             }
@@ -80,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
             if(login.user != null){
                 loginViewModel.saveSession(
                     UserModel(
-                        binding.emailEditText.text.toString(),
+                        binding.emailEditTextLayout.text.toString(),
                         login.token.toString(),
                         true
                     )

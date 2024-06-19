@@ -48,9 +48,9 @@ class SignupActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.signupButton.setOnClickListener {
-            val email = binding.emailEditText.text.toString()
-            val name = binding.nameEditText.text.toString()
-            val password = binding.passwordEditText.text.toString()
+            val email = binding.emailEditTextLayout.text.toString()
+            val name = binding.nameTextbox.text.toString()
+            val password = binding.passwordEditTextLayout.text.toString()
             if (name.isBlank() || email.isBlank() || password.isBlank()) {
                 Toast.makeText(this, "Cannot be empty", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
