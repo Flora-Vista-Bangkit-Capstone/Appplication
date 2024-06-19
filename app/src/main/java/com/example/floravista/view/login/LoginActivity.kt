@@ -1,22 +1,26 @@
 package com.example.floravista.view.login
 
+import android.R
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentTransaction
 import com.example.floravista.MenuBottom
 import com.example.floravista.ViewModelFactory
 import com.example.floravista.data.pref.UserModel
 import com.example.floravista.databinding.ActivityLoginBinding
-import com.example.floravista.view.main.MainActivity
+import com.example.floravista.ui.home.HomeFragment
 import com.example.floravista.view.register.SignupActivity
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -82,9 +86,10 @@ class LoginActivity : AppCompatActivity() {
                     )
                 )
                 showLoading(false)
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                val intent = Intent(this@LoginActivity, MenuBottom::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intent)
+                startActivity(intent,
+                    ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
             }else{
                 showLoading(false)
                 Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
