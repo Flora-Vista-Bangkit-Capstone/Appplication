@@ -30,6 +30,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup" />
 
+    <ImageView
+    android:id="@+id/bunga"
+    android:layout_width="150dp"
+    android:layout_height="350dp"
+    android:layout_marginStart="310dp"
+    android:layout_marginBottom="370dp"
+    android:adjustViewBounds="true"
+    android:background="@drawable/bunga"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/name_title"
         android:layout_width="wrap_content"
@@ -44,30 +57,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_description" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/name_textbox"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:height="50dp"
+        android:ems="10"
+        android:background="@drawable/custom_input"
         android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:fontFamily="@font/inter"
         android:alpha="0"
         tools:alpha="100"
+        android:textColorHint="@color/black"
+        android:textSize="15sp"
         android:hint="@string/name"
-        app:boxStrokeColor="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_title">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            app:boxStrokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/name_title"/>
 
     <TextView
         android:id="@+id/email_title"
@@ -82,31 +94,30 @@
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_textbox" />
-    <com.google.android.material.textfield.TextInputLayout
+
+    <EditText
         android:id="@+id/emailEditTextLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:height="50dp"
+        android:ems="10"
+        android:background="@drawable/custom_input"
         android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:fontFamily="@font/inter"
         android:alpha="0"
         tools:alpha="100"
+        android:textColorHint="@color/black"
+        android:textSize="15sp"
         android:hint="@string/email"
-        app:boxStrokeColor="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_title">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            app:boxStrokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/email_title"/>
 
     <TextView
         android:id="@+id/password_title"
@@ -122,31 +133,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/passwordEditTextLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:height="50dp"
+        android:ems="10"
+        android:background="@drawable/custom_input"
         android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:fontFamily="@font/inter"
         android:alpha="0"
         tools:alpha="100"
+        android:textColorHint="@color/black"
+        android:textSize="15sp"
         android:hint="@string/pass"
-        app:boxStrokeColor="@color/black"
-        app:endIconMode="password_toggle"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_title">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            app:boxStrokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/password_title"/>
 
     <Button
         android:id="@+id/signupButton"
@@ -166,18 +175,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
 
-    <ImageView
-        android:id="@+id/bunga"
-        android:layout_width="150dp"
-        android:layout_height="350dp"
-        android:layout_marginStart="310dp"
-        android:layout_marginBottom="370dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/bunga"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
