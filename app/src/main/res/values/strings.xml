@@ -42,4 +42,7 @@
     <string name="cardTitle3">Card 3</string>
     <string name="cardText3">Text 2</string>
     <string name="title_activity_menu_bottom">MenuBottom</string>
+    <string name="nothing">Nothing here. For now.</string>
+    <string name="scanned">This is where you\'ll find your \n scanned plants.</string>
+    <string name="startscan">Start scanning</string>
 </resources>

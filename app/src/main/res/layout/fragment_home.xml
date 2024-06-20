@@ -4,22 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-    <ImageView
-        android:id="@id/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/beige">
 
     <ImageView
         android:id="@+id/user_avatar"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/user_avatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="24dp"
         android:text="@string/hi"
         android:textColor="@color/gray"
         app:layout_constraintStart_toEndOf="@+id/user_avatar"
@@ -44,348 +38,56 @@
         app:layout_constraintStart_toEndOf="@+id/user_avatar"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <ImageView
-        android:id="@+id/cardBox"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/card_home_style"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/personDailyTip"
-        android:layout_width="250dp"
-        android:layout_height="350dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginBottom="55dp"
-        android:background="@drawable/person_daily_tip"
-        app:layout_constraintBottom_toBottomOf="@+id/cardBox"
-        app:layout_constraintEnd_toEndOf="@+id/cardBox"
-        app:layout_constraintStart_toStartOf="@+id/cardBox"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ViewFlipper
-        android:id="@+id/cardTitle"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="80dp"
-        android:flipInterval="2000"
-        android:inAnimation="@anim/slide_out_left"
-        android:outAnimation="@anim/slide_in_right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/card_title1"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/inter_bold"
-                android:text="@string/cardTitle1"
-                android:textColor="@color/navy"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/card_title2"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/inter_bold"
-                android:text="@string/cardTitle2"
-                android:textColor="@color/navy"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/card_title3"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/inter_bold"
-                android:text="@string/cardTitle3"
-                android:textColor="@color/navy"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ViewFlipper>
-
-    <ViewFlipper
-        android:id="@+id/cardText"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="80dp"
-        android:flipInterval="2000"
-        android:inAnimation="@anim/slide_out_left"
-        android:outAnimation="@anim/slide_in_right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/card_text1"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/cardText1"
-                android:textColor="@color/brown"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/card_text2"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/cardText2"
-                android:textColor="@color/brown"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/card_text3"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/cardText3"
-                android:textColor="@color/brown"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ViewFlipper>
-
-    <TextView
-        android:id="@+id/categories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/inter_black"
-        android:text="@string/categories"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardBox" />
-
-    <ImageButton
-        android:id="@+id/indoorButton"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="30dp"
-        android:background="@drawable/indoor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categories" />
-
-
-    <TextView
-        android:id="@+id/indoorText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/indoor"
-        app:layout_constraintBottom_toBottomOf="@+id/indoorButton"
-        app:layout_constraintEnd_toEndOf="@+id/indoorButton"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="@+id/indoorButton"
-        app:layout_constraintTop_toTopOf="@+id/indoorButton"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/outdoor"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/outdoor"
-        app:layout_constraintStart_toEndOf="@+id/indoorButton"
-        app:layout_constraintTop_toBottomOf="@+id/categories" />
-
-    <TextView
-        android:id="@+id/outdoorText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/outdoor"
-        app:layout_constraintBottom_toBottomOf="@+id/outdoor"
-        app:layout_constraintEnd_toEndOf="@+id/outdoor"
-        app:layout_constraintHorizontal_bias="0.269"
-        app:layout_constraintStart_toEndOf="@+id/indoorText"
-        app:layout_constraintTop_toTopOf="@+id/outdoor"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/garden"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/garden"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/outdoor"
-        app:layout_constraintTop_toBottomOf="@+id/categories" />
-
-    <TextView
-        android:id="@+id/gardenText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/garden"
-        app:layout_constraintBottom_toBottomOf="@+id/garden"
-        app:layout_constraintEnd_toEndOf="@+id/garden"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toEndOf="@+id/outdoorText"
-        app:layout_constraintTop_toTopOf="@+id/garden"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/History"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/inter_black"
-        android:text="@string/history"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/indoorButton" />
-
-    <TextView
-        android:id="@+id/historyViewList"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/seeall"
-        android:textColor="@color/gray"
-        app:layout_constraintBottom_toBottomOf="@+id/History"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageButton
-        android:id="@+id/historyCard1"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/history_card1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/History" />
-
-    <ImageButton
-        android:id="@+id/historyImage1"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toBottomOf="@+id/historyCard1"
-        app:layout_constraintEnd_toEndOf="@+id/historyCard1"
-        app:layout_constraintStart_toStartOf="@+id/historyCard1"
-        app:layout_constraintTop_toTopOf="@+id/historyCard1"
-        tools:background="@drawable/beige_simple_aesthetic_cactus_logo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/historyCard1"
-        app:layout_constraintEnd_toEndOf="@+id/historyCard1"
-        app:layout_constraintStart_toStartOf="@+id/historyCard1"
-        app:layout_constraintTop_toBottomOf="@+id/historyImage1"
-        android:fontFamily="@font/inter_bold"
-        tools:text="PlantName1" />
-
-    <ImageButton
-        android:id="@+id/historyCard2"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/history_card2"
-        app:layout_constraintStart_toEndOf="@+id/historyCard1"
-        app:layout_constraintTop_toBottomOf="@+id/History" />
-
-    <ImageButton
-        android:id="@+id/historyImage2"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toBottomOf="@+id/historyCard2"
-        app:layout_constraintEnd_toEndOf="@+id/historyCard2"
-        app:layout_constraintStart_toStartOf="@+id/historyCard2"
-        app:layout_constraintTop_toTopOf="@+id/historyCard2"
-        tools:background="@drawable/beige_simple_aesthetic_cactus_logo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/historyCard2"
-        app:layout_constraintEnd_toEndOf="@+id/historyCard2"
-        app:layout_constraintStart_toStartOf="@+id/historyCard2"
-        app:layout_constraintTop_toBottomOf="@+id/historyImage2"
-        android:fontFamily="@font/inter_bold"
-        tools:text="PlantName2" />
-
-    <ImageButton
-        android:id="@+id/historyCard3"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/history_card3"
-        app:layout_constraintStart_toEndOf="@+id/historyCard2"
-        app:layout_constraintTop_toBottomOf="@+id/History" />
-
-    <ImageButton
-        android:id="@+id/historyImage3"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toBottomOf="@+id/historyCard3"
-        app:layout_constraintEnd_toEndOf="@+id/historyCard3"
-        app:layout_constraintStart_toStartOf="@+id/historyCard3"
-        app:layout_constraintTop_toTopOf="@+id/historyCard3"
-        tools:background="@drawable/beige_simple_aesthetic_cactus_logo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/historyCard3"
-        app:layout_constraintEnd_toEndOf="@+id/historyCard3"
-        app:layout_constraintStart_toStartOf="@+id/historyCard3"
-        app:layout_constraintTop_toBottomOf="@+id/historyImage3"
-        android:fontFamily="@font/inter_bold"
-        tools:text="PlantName3" />
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/burung"
+        android:layout_width="411dp"
+        android:layout_height="424dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/burung"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nothing"
+        android:fontFamily="@font/inter_black"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/burung" />
+
+    <TextView
+        android:id="@+id/where"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:textColor="@color/gray2"
+        android:text="@string/scanned"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nothing" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_login_button"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/startscan"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/where" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

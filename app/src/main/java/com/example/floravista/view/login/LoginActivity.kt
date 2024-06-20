@@ -106,13 +106,14 @@ class LoginActivity : AppCompatActivity() {
         }.start()
 
         val welcome = ObjectAnimator.ofFloat(binding.textView, View.ALPHA, 1f).setDuration(500)
+        val welkam = ObjectAnimator.ofFloat(binding.latinView, View.ALPHA, 1f).setDuration(500)
         val email = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
         val pass = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
         val button = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(500)
         val not = ObjectAnimator.ofFloat(binding.notMember, View.ALPHA, 1f).setDuration(500)
         val reg = ObjectAnimator.ofFloat(binding.registerNow, View.ALPHA, 1f).setDuration(500)
         AnimatorSet().apply {
-            playSequentially(welcome, email, pass, button, not, reg)
+            playSequentially(welcome,welkam, email, pass, button, not, reg)
             start()
         }
 
