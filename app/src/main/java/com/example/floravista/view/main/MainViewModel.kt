@@ -34,5 +34,4 @@ class MainViewModel(private val repository: UserRepository) : ViewModel() {
         }
     }
 
-
 }

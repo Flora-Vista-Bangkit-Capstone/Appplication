@@ -10,7 +10,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        var actionBar = supportActionBar
+        val actionBar = supportActionBar
 
         actionBar?.setDisplayHomeAsUpEnabled(true)
     }

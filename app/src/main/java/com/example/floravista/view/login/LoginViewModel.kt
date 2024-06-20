@@ -9,7 +9,7 @@ import com.example.floravista.data.pref.UserModel
 import com.example.floravista.data.response.LoginResponse
 import kotlinx.coroutines.launch
 
-class LoginViewModel (private val userRepository: UserRepository) : ViewModel(){
+class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
     private val _loginResponse = MutableLiveData<LoginResponse>()
     val loginResponse: LiveData<LoginResponse> = _loginResponse
 
@@ -20,13 +20,23 @@ class LoginViewModel (private val userRepository: UserRepository) : ViewModel(){
         _isLoading.value = true
         viewModelScope.launch {
             try {
-                val response = userRepository.login( email, password)
+                val response = userRepository.login(email, password)
                 _loginResponse.value = response
                 _isLoading.value = false
+
+                // Save session if login is successful
+                response.token?.let {
+                    val user = UserModel(
+                        email = email,
+                        token = it,
+                        name = response.user?.name ?: "",
+                        isLogin = true
+                    )
+                    saveSession(user)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
-                _loginResponse.value =
-                    LoginResponse(message = e.message ?: "Error")
+                _loginResponse.value = LoginResponse(message = e.message ?: "Error")
                 _isLoading.value = false
             }
         }
@@ -37,5 +47,4 @@ class LoginViewModel (private val userRepository: UserRepository) : ViewModel(){
             userRepository.saveSession(user)
         }
     }
-
 }

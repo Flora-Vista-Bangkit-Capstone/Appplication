@@ -1,6 +1,6 @@
 package com.example.floravista.view.login
 
-import android.R
+
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.app.ActivityOptions
@@ -13,12 +13,10 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import com.example.floravista.MenuBottom
 import com.example.floravista.ViewModelFactory
 import com.example.floravista.data.pref.UserModel
 import com.example.floravista.databinding.ActivityLoginBinding
-import com.example.floravista.ui.home.HomeFragment
 import com.example.floravista.view.register.SignupActivity
 
 
@@ -28,13 +26,14 @@ class LoginActivity : AppCompatActivity() {
     private val loginViewModel by viewModels<LoginViewModel> {
         ViewModelFactory.getInstance(this)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.registerNow.setOnClickListener{
-            val intent = Intent(this@LoginActivity,  SignupActivity::class.java)
+            val intent = Intent(this@LoginActivity, SignupActivity::class.java)
             startActivity(intent)
         }
 
@@ -77,12 +76,13 @@ class LoginActivity : AppCompatActivity() {
 
     private fun authenticationPass() {
         loginViewModel.loginResponse.observe(this){ login ->
-            if(login.user != null){
+            if (login.user != null) {
                 loginViewModel.saveSession(
                     UserModel(
-                        binding.emailEditTextLayout.text.toString(),
-                        login.token.toString(),
-                        true
+                        email = binding.emailEditTextLayout.text.toString(),
+                        token = login.token.toString(),
+                        name = login.user.name ?: "",
+                        isLogin = true
                     )
                 )
                 showLoading(false)
@@ -90,13 +90,12 @@ class LoginActivity : AppCompatActivity() {
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent,
                     ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-            }else{
+            } else {
                 showLoading(false)
                 Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
 
     private fun playAnimation() {
         ObjectAnimator.ofFloat(binding.welcomeImg, View.TRANSLATION_Y, -30f, 30f).apply {
@@ -113,10 +112,9 @@ class LoginActivity : AppCompatActivity() {
         val not = ObjectAnimator.ofFloat(binding.notMember, View.ALPHA, 1f).setDuration(500)
         val reg = ObjectAnimator.ofFloat(binding.registerNow, View.ALPHA, 1f).setDuration(500)
         AnimatorSet().apply {
-            playSequentially(welcome,welkam, email, pass, button, not, reg)
+            playSequentially(welcome, welkam, email, pass, button, not, reg)
             start()
         }
-
     }
 
     private fun showLoading(isLoading: Boolean) {

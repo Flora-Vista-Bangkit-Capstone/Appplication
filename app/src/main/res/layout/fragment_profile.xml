@@ -10,6 +10,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/inter_black"
         android:text="@string/title_profile"
         android:textSize="15sp"
@@ -22,10 +23,11 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/user_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:background="@drawable/user_avatar" />
+         />
 
     <TextView
         android:id="@+id/username"
