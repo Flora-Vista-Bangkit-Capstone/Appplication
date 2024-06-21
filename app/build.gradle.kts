@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.floravista"
+    namespace = "com.flora.vista"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.floravista"
+        applicationId = "com.flora.vista"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

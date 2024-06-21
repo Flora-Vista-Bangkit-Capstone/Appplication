@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "floravista"
+rootProject.name = "Flora Vista"
 include(":app")
  
