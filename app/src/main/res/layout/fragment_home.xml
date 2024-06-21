@@ -40,13 +40,12 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/burung"
-        android:layout_width="411dp"
-        android:layout_height="424dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="375dp"
+        android:layout_height="414dp"
+        android:layout_marginTop="60dp"
         android:adjustViewBounds="true"
         android:src="@drawable/burung"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,6 +71,7 @@
         android:textColor="@color/gray2"
         android:text="@string/scanned"
         android:textSize="14sp"
+        android:letterSpacing="0.01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nothing" />
@@ -82,9 +82,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@drawable/custom_login_button"
-        android:fontFamily="@font/inter_semibold"
+        android:fontFamily="@font/inter_bold"
         android:text="@string/startscan"
-        app:backgroundTint="@null"
+        android:textSize="12sp"
+        android:letterSpacing="0.01"
+        app:backgroundTint="#006FFD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/where" />
