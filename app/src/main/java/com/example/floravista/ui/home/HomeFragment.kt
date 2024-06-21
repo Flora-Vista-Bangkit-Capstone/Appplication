@@ -1,5 +1,6 @@
 package com.example.floravista.ui.home
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.example.floravista.data.pref.UserPreferences
 import com.example.floravista.data.pref.dataStore
 import com.example.floravista.databinding.FragmentHomeBinding
-import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
+
 
 class HomeFragment : Fragment() {
 
